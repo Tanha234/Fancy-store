@@ -22,7 +22,7 @@ body {
   width: 300px;
   border-radius: 5px; 
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
   border-right: none;
  
    
@@ -86,7 +86,7 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
+   
     padding: 10px;
     box-shadow: 10px 10px 20px rgb(216, 179, 179);
     border-radius: 5px;
