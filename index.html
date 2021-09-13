@@ -16,32 +16,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 
-<body>
-  <header></header>
-  <main class="main container">
+<body class="body-color">
+  <header>
     <h1 class="text-center">Welcome to our botiuae</h1>
+  </header>
+  <main class="main container ">
+    
     <div class="search-field">
-      <div class="search-box">
-        
-        
-        <input id="input-field" class="search-field w-50" type="text" />
-        <button type="button" class="btn btn-info search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-        
+       <div class="search-box">
+ 
+       <div class="input-group mb-3 w-50">
+            <input id="input-field" class="search-field" type="text" class="form-control" placeholder="Search your product" aria-label="Recipient's username" aria-describedby="button-addon2">
+            
+            <button id="search-btn" onclick="loadProducts()">Save</button>
+          </div>
+        </div>
 
     </div>
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
-        <div class="col-md-3">
+        
      
         <div id="all-products">
-          <h1></h1>
+          <!-- <h1></h1> -->
         </div>
       </div>
+      
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -61,12 +64,14 @@
                 <td></td>
                 <td></td>
               </tr>
+              
               <tr>
                 <th>Price:</th>
                 <td>$ <span id="price">0</span></td>
                 <td></td>
                 <td></td>
               </tr>
+              
               <tr>
                 <th>Delivery-Charge:</th>
                 <td>$ <span id="delivery-charge">20</span></td>
@@ -87,7 +92,7 @@
             </tbody>
           </table>
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-success text-center">Buy Now</button>
           </div>
         </div>
       </div>

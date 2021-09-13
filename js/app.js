@@ -16,14 +16,18 @@ const showProducts = (products) => {
     <div class="card">
       <div>
       <img class="product-image" src=${product.image}></img>
-      </div>
+      </div >
       <h3>${product.title.slice(0,18)}</h3>
       <p>Category: ${product.category}</p>
-      <p>Rating ${product.rating.rate}</p>
-      <p> ${product.rating.count} Person rated this product</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-info">Details</button></div>
+      <p><i class="fas fa-star "></i> Rating ${product.rating.rate}</p>
+      
+     
+
+      <p><i class="fas fa-user-alt"></i> ${product.rating.count} People rated this product</p>
+      
+      <p>Price: $ ${product.price}</p>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart <i class="fas fa-shopping-cart"></i></button>
+      <button id="details-btn" class="btn btn-gray-800 ">Details</button></div>
       ;
       </div>`
     document.getElementById("all-products").appendChild(div);
@@ -55,7 +59,7 @@ const updatePrice = (id, value) => {
 
 // set innerText function
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  document.getElementById(id).innerText = parseFloat(value.toFixed(2));
 };
 
 // update delivery charge and total Tax
