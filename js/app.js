@@ -13,17 +13,19 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
+    <div class="card">
       <div>
       <img class="product-image" src=${product.image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h3>${product.title.slice(0,18)}</h3>
       <p>Category: ${product.category}</p>
-      <p>Rate: ${product.rating.rate}</p>
-      <p>Total rating: ${product.rating.count}</p>
+      <p>Rating ${product.rating.rate}</p>
+      <p> ${product.rating.count} Person rated this product</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
-      `;
+      <button id="details-btn" class="btn btn-info">Details</button></div>
+      ;
+      </div>`
     document.getElementById("all-products").appendChild(div);
   }
 };
@@ -34,6 +36,7 @@ const addToCart = (id, price) => {
 
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
+  updateTotal();
 };
 
 const getInputValue = (id) => {
@@ -47,7 +50,7 @@ const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.round(total);
+  document.getElementById(id).innerText =parseFloat(total.toFixed(2));
 };
 
 // set innerText function
@@ -70,6 +73,7 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  updateTotal();
 };
 
 //grandTotal update function
@@ -78,5 +82,8 @@ const updateTotal = () => {
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
   document.getElementById("total").innerText = grandTotal;
+  
 };
+
+
 loadProducts();

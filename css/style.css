@@ -1,12 +1,17 @@
 body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
+  
 }
 .search-field {
   border: none;
   border-radius: 50px;
   padding: 5px;
   outline: none;
+  
+  
+  
+  
 }
 .search-field:hover {
   outline: none;
@@ -39,11 +44,11 @@ body {
   padding: 10px;
   transition: 0.6s;
 }
-.single-product:hover {
+/* .single-product:hover {
   box-shadow: 4px 4px 7px gray;
   border-radius: 10px;
   border: 1px solid cyan;
-}
+} */
 .product-image {
   width: 150px;
   height: 150px;
@@ -56,6 +61,9 @@ body {
   border-radius: 5px;
   margin-right: 30px;
   position: fixed;
+  border: 1px solid rgb(36, 39, 1);
+  background-color: rgba(145, 137, 127, 0.205);
+  margin-top: 110px;
 }
 .cart-main {
   padding-right: 30px;
@@ -73,6 +81,8 @@ body {
     border-radius: 5px;
     margin-right: 30px;
     position: fixed;
+    
+    
   }
   .cart-main {
     padding-right: 10px;
@@ -83,4 +93,21 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+}
+      /*............ Modified some itmes................. */
+.card{
+  border:2px solid rgba(75, 39, 74, 0.37);
+
+  height: 500px;
+  width: 280px;
+  background-color:azure;
+  border-radius:15px;
+  margin-top: 80px;
+  
+}
+.card:hover{
+  box-shadow: 4px 4px 7px gray;
+  border-radius: 10px;
+  border: 1px solid rgb(5, 240, 162);
+  background-color:rgba(2, 54, 54, 0.103);
 }
